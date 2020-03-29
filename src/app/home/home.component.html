@@ -1,17 +1,17 @@
-<h4 id="title">הקורונה בישראל</h4>
+<h4 id="title"> בעולם Covid-19 נתוני</h4>
 
 
 <!-- <cdk-virtual-scroll-viewport id="scrollerComponents" itemSize="50" class="viewport"> -->
       <div *ngFor="let stat of StatsArray">
-        <div class="task" >
-          <p id="task-status">{{ stat.title }}</p>
-          <!-- <hr class="kav"> -->
-          <!-- <div id="taskNameDecorationOpen"></div>
-          <p id="task-date">{{ task.open_date }}</p>
-          <p id="task-title">{{ getTaskCategory(task) }}</p>
-          <p id="timeTillTreatment">זמן צפוי לטיפול יומיים</p>
-          <p id="task-id">{{ task.id }}</p>
-        </div> -->
-      </div>
+        <!-- <div class="task" > -->
+          <div class="card shadow1">
+            <h2 id="IsraelTitle">הקורונה בישראל</h2>
+          <pre style="font-family: Rubik; color: blue; font-size: 34px; text-align: left;"> {{stat.total_cases}} </pre>
+          <p style="font-family: Rubik; color: rgb(0, 0, 0); font-size: 20px; position: relative; left: 20px; top: -15px;">נדבקו</p>
+          <pre style="font-family: Rubik; color: blue; font-size: 34px;"> +{{ stat.total_new_cases_today }} </pre>
+          <p style="font-family: Rubik; color: rgb(0, 0, 0); font-size: 20px; position: relative; top: -15px;"> חולים חדשים</p>
+          <pre style="font-family: Rubik; color: rgb(255, 0, 0); font-size: 34px; text-align: center; position: relative; top: -265px;"> {{ stat.total_deaths }} </pre>
+          <p style="font-family: Rubik; color: rgb(0, 0, 0); font-size: 20px; position: relative; top: -281px; text-align: center; position: relative;"> מתים</p>
+        </div>
+  
     </div>
-<!-- </cdk-virtual-scroll-viewport> -->
