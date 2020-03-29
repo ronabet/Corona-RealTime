@@ -1,0 +1,51 @@
+span {cursor: context-menu;}
+
+@font-face {
+    font-family: Rubik;
+    src: url(../../assets/Rubik-Medium.ttf);
+}
+
+
+.header-wrapper {
+    width: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-areas: "a b c d e f g h i j k l";
+    grid-template-columns: repeat(12,1fr);
+    background-color: white;
+    height: 8vh;
+    position: fixed;
+    box-shadow: 0 5px 13px 0 rgba(184, 184, 184, 0.3);
+    top: 0%;
+    z-index: 1;
+}
+
+
+#one-logo {
+    grid-area: c;
+    width: 2.2vw;
+    height: 3vh;
+    margin-left: 50%;
+}
+
+#corona-title{
+    grid-area: k;
+    font-family: Rubik;
+    cursor: pointer;
+    position: relative;
+    left: 60%;
+}
+
+#tommy-logo {
+    grid-area: l;
+    width: 10vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+
+#username{
+    grid-area: d;
+    font-family: rubik;
+    font-size: 16px;
+}
