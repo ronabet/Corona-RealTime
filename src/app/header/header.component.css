@@ -11,6 +11,7 @@ span {cursor: context-menu;}
     width: 100%;
     align-items: center;
     display: grid;
+    position: fixed;
     grid-template-areas: "a b c d e f g h i j";
     grid-template-columns: repeat(10,1fr);
     background-color: #0e1020;

@@ -5,14 +5,31 @@
   text-align: center;
   left: 20vh;
   color: #ffffff;
-  margin-top: 13vh;
+  padding-top: 12vh;
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 0.83;
   letter-spacing: normal;
+
+}
+
+#worldtitle{
+  text-align: center;
+  left: 20vh;
+  color: #ffffff;
+  padding-top: 7vh;
+  padding-bottom: 2vh;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+
 }
 
 #IsraelTitle{
@@ -27,8 +44,33 @@
   line-height: 0.83;
   letter-spacing: normal;
   text-align: center;
+  color: white;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+  padding: 10px;
+  text-align: center;
+  grid-auto-flow: column;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+#casesIL {
+  color: #6afff3;
+}
+
+.item1 {
+  grid-row: 1 ;
+}
 
 h2 {
   margin-top: 0;
@@ -51,9 +93,7 @@ h2 {
 }
 
 .card{
-  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   box-shadow: 0 4px 30px rgba(0,0,0,.5);
-  /* background-color: white; */
   transition: 0.3s;
   margin: 2vh;
   background-color: #26273b;
@@ -75,23 +115,20 @@ h2 {
   color: #ffffff;
 }
 
-
 #totalCases{
-  color: red;
+  color: #6afff3;
   top: 2vh;
-  font-size: 3vw;
-  font-weight: 600;
+  font-size: 2.5vw;
   text-align: center;
   font-family: 'Pathway Gothic One', sans-serif;
-  font-weight: inherit;
+  font-weight: 100;
   position: relative;
 }
-
 
 .israelCard {
   padding: 40px;
   width: 65%;
-  height: 300px;
+  height: 200px;
   font-family: 'Pathway Gothic One', sans-serif;
   font-weight: inherit;
   border-radius: 20px;

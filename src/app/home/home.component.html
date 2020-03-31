@@ -2,25 +2,28 @@
 
       <div *ngFor="let stat of StatsArray">
           <div class="israelCard">
-            <h2 id="IsraelTitle">הקורונה בישראל</h2>
-              <p> {{stat.total_cases}} </p>
-              <p>נדבקו</p>
-              <p> +{{ stat.total_new_cases_today }}</p>
-              <p> חולים חדשים</p>
-              <p> {{ stat.total_deaths }} </p>
-              <p> מתים</p>
-              <p> +{{ stat.total_new_deaths_today }} </p>
-              <p>ביממה האחרונה</p>
-              <p> {{ stat.total_recovered }} </p>
-              <p>החלימו</p>
-              <p> {{ stat.total_serious_cases }} </p>
-              <p>במצב קשה</p>
+            <h2 id="IsraelTitle">COVID-19 ISRAEL STATISTICS</h2>
+            <div class="grid-container">
+              <p id="casesIL"> TOTAL CASES <br> {{stat.total_cases}} </p>
+              <!-- <p>נדבקו</p> -->
+              <p id="casesIL"> NEW CASES (LAST 24H) <br> +{{ stat.total_new_cases_today }} </p>
+              <!-- <p> חולים חדשים</p> -->
+              <p> TOTAL DEATHS <br> {{ stat.total_deaths }} </p>
+              <!-- <p> מתים</p> -->
+              <p> NEW DEATHS (LAST 24H) <br> +{{ stat.total_new_deaths_today }} </p>
+              <!-- <p>ביממה האחרונה</p> -->
+              <p> TOTAL RECOVERED <br> {{ stat.total_recovered }} </p>
+              <!-- <p>החלימו</p> -->
+              <p> SERIOUS CASES <br> {{ stat.total_serious_cases }} </p>
+              <!-- <p>במצב קשה</p> -->
+            </div>
           </div>
       </div>
 
+    <h4 id="worldtitle">COVID-19 WORLD STATISTICS</h4>
+
     <app-search-bar (textChanged)="searchTextChanged($event)"></app-search-bar>
 
-    <h4 id="title">COVID-19 WORLD STATISTICS</h4>
     <div class="container2">
       <div class="card" *ngFor="let stat of StatsToDisplay" >
         <span id="countryName">{{ stat.title }}</span>
