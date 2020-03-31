@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
 span {cursor: context-menu;}
 
 @font-face {
@@ -10,36 +11,84 @@ span {cursor: context-menu;}
     width: 100%;
     align-items: center;
     display: grid;
-    grid-template-areas: "a b c d e f g h i j k l";
-    grid-template-columns: repeat(12,1fr);
-    background-color: white;
-    height: 8vh;
-    position: fixed;
-    box-shadow: 0 5px 13px 0 rgba(184, 184, 184, 0.3);
+    grid-template-areas: "a b c d e f g h i j";
+    grid-template-columns: repeat(10,1fr);
+    background-color: #0e1020;
+    height: 10vh;
+    box-shadow: 0 5px 13px 0 #070911;
     top: 0%;
     z-index: 1;
 }
 
-
-#one-logo {
+#home{
+    font-family: 'Pathway Gothic One', sans-serif;
     grid-area: c;
-    width: 2.2vw;
-    height: 3vh;
-    margin-left: 50%;
-}
-
-#corona-title{
-    grid-area: k;
-    font-family: Rubik;
+    font-size: 1.3rem;
+    color: white;
     cursor: pointer;
     position: relative;
-    left: 60%;
+    top: -1vh;
+    transition: 0.3s;
+    text-align: center;
+}
+
+#home:hover{
+    color: #6afff3;
+
+}
+
+#info{
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    grid-area: d;
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: -1vh;
+    transition: 0.3s;
+}
+
+#info:hover{
+    color: #bf71ff;
+}
+
+#symp{
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    grid-area: e;
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: -1vh;
+    transition: 0.3s;
+    left: 10px;
+}
+
+#symp:hover{
+    color: #9193a8;
+}
+
+
+
+#corona-title{
+    font-family: 'Pathway Gothic One', sans-serif;
+    grid-area: b;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: -1vh;
+    right: 30%;
 }
 
 #tommy-logo {
-    grid-area: l;
+    grid-area: a;
+    position: relative;
+    top: -1vh;
     width: 10vw;
-    height: 5vh;
+    height: 6.5vh;
     cursor: pointer;
 }
 

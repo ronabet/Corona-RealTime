@@ -9,7 +9,7 @@ export interface CountryStatisticModel {
   "total_deaths": string;
   "total_new_cases_today": string,
   "total_new_deaths_today": string,
-  "total_active_cases": string
+  "total_serious_cases": string
 }
 
 

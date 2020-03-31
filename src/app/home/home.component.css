@@ -1,69 +1,122 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+/* #1cbfff */
 #title{
-    text-align: center;
-    left: 20vh;
-    margin-top: 13vh;
-    font-family: Rubik;
-    font-size: 32px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 0.83;
-    letter-spacing: normal;
-    text-align: center;
+  text-align: center;
+  left: 20vh;
+  color: #ffffff;
+  margin-top: 13vh;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
 }
 
 #IsraelTitle{
-    text-align: center;
-    left: 20vh;
-    margin-top: 0.2vh;
-    font-family: Rubik;
-    font-size: 23px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 0.83;
-    letter-spacing: normal;
-    text-align: center;
+  text-align: center;
+  left: 20vh;
+  margin-top: 0.2vh;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 23px;
+  font-weight: inherit;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: center;
 }
 
-
-
-
-@font-face {
-    font-family: Rubik-light;
-    font-style: normal;
-    font-weight: 400;
-    src: local('Rubik'), local('Rubik-Regular'), url(../../assets/rubik-light.woff2) format('woff2');
-    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
-}
-
-@font-face {
-    font-family: Rubik;
-    src: url(../../assets/Rubik-Medium.ttf);
-}
 
 h2 {
-    margin-top: 0;
-    font-family: Rubik;
-  }
+  margin-top: 0;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: inherit;
+}
   
-  .card {
-    padding: 40px;
-    width: 75%;
-    height: 350px;
-    font-family: Rubik;
-    background: #fff;
-    border-radius: 20px;
-    margin: 60px auto;
-  }
-  
-  .highlight {
-    font-weight: bold;
-    color: #294;
-  }
-  
-  .shadow1 { 
-    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
-  }
+.centertxt{
+  display: flex; 
+  align-items: center; 
+  width: 100%; 
+  text-align: center;
+}
+.container2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  box-shadow: 0 4px 30px rgba(0,0,0,.5);
+  /* background-color: white; */
+  transition: 0.3s;
+  margin: 2vh;
+  background-color: #26273b;
+  padding: 2px 16px;
+  text-align: center;
+  height: 18vh;
+  font-weight: inherit;
+  border-radius: 6px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  width: 30vh;
+}
+
+.card:hover{
+  cursor: pointer;
+  width: 48vh;
+  box-shadow: 0 5px 14px 0 black;
+  background-color: #26273b;
+  height: 30vh;
+  color: #ffffff;
+}
+
+
+#totalCases{
+  color: red;
+  top: 2vh;
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: inherit;
+  position: relative;
+}
+
+
+.israelCard {
+  padding: 40px;
+  width: 65%;
+  height: 300px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: inherit;
+  border-radius: 20px;
+  background-color: #26273b;
+  margin: 60px auto;
+  transition: 0.2s;
+}
+
+.israelCard:hover{
+  box-shadow: 0 5px 14px 0 black;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #294;
+}
+
+#countryName{
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: inherit;
+  font-size: 2vw;
+}
+
+
+
+
+
   
