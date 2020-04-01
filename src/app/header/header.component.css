@@ -69,6 +69,11 @@ span {cursor: context-menu;}
     color: #bf71ff;
 }
 
+#protect:hover{
+    color: #6afff3;
+
+}
+
 #symp{
     text-align: center;
     font-family: 'Pathway Gothic One', sans-serif;
@@ -84,6 +89,23 @@ span {cursor: context-menu;}
 
 #symp:hover{
     color: #9193a8;
+}
+
+#qa{
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    grid-area: g;
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: -1vh;
+    transition: 0.3s;
+    left: 25px;
+}
+
+#qa:hover{
+    color: #bf71ff;
 }
 
 

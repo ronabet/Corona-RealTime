@@ -137,10 +137,10 @@ h2 {
 
 .card:hover{
   cursor: pointer;
-  width: 48vh;
+  width: 35vh;
   box-shadow: 0 5px 14px 0 black;
   background-color: #26273b;
-  height: 30vh;
+  height: 20vh;
   color: #ffffff;
 }
 
@@ -179,6 +179,7 @@ h2 {
   font-family: 'Pathway Gothic One', sans-serif;
   font-weight: inherit;
   font-size: 2vw;
+  color: white;
 }
 
 

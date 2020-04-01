@@ -9,3 +9,23 @@ html {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.myapp-background .mat-dialog-container {
+    background-color: #0e1020;
+}
+
+.mat-expansion-panel-header {
+    background: #26273b;
+}
+
+.mat-expansion-panel-header:hover{
+    background: #212233;
+}
+
+.mat-expansion-panel-body {
+    background: #26273b;
+}
+
+.mat-expansion-panel:not(.mat-expended) .mat-expension-panel-header:hover:not([aria-disabled=true]){
+    background: #26273b;
+}

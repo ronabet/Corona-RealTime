@@ -31,7 +31,7 @@
     background-color: #26273b;
     padding: 2px 16px;
     text-align: center;
-    height: 35vh;
+    height: 18vh;
     font-weight: inherit;
     border-radius: 6px;
     font-family: 'Pathway Gothic One', sans-serif;
@@ -61,7 +61,10 @@
 #countryName{
     position: relative;
     top: 40px;
-    color: white;
+    /* color: white; */
     font-size: 2rem;
+    background: -webkit-linear-gradient(#6afff3, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
   

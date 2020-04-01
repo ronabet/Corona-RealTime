@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
+
+#title{
+  text-align: center;
+  left: 20vh;
+  color: #ffffff;
+  padding-top: 12vh;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+}
+
+/* .mat-expansion-panel-body{
+    background: #26273b;
+}
+
+.mat-expansion-panel-header {
+    background: #26273b;
+} */
+
+.panel{
+    transition: 0.3s;
+}
+
+.panel:hover{
+background-color: #1c1d2c !important;   
+}
+
+.panel:focus{
+    background-color: #26273b !important;   
+}
+    
+
+.mat-expansion-panel-header:hover {
+    background: #26273b;
+} 
+
+.questTitle{
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+

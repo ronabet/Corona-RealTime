@@ -29,5 +29,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('protectyourself', { relativeTo: this.route });
   }
 
+  onQA(){
+    this.router.navigateByUrl('qa', { relativeTo: this.route });
+  }
+
 
 }
