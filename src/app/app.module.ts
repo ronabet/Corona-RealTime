@@ -9,6 +9,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 // import { SidebarComponent } from './sidebar/sidebar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { InfoComponent } from './info/info.component';
+import { SympComponent } from './symp/symp.component';
 // import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
@@ -16,7 +18,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    InfoComponent,
+    SympComponent
     // SidebarComponent
   ],
   imports: [

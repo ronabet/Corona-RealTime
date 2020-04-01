@@ -1,4 +1,4 @@
-<h4 id="title">CORONAVIRUS DISEASE</h4>
+<h4 id="title">CORONAVIRUS DISEASE REAL-TIME STATISTICS</h4>
 
       <div *ngFor="let stat of StatsArray">
           <div class="israelCard">
@@ -8,13 +8,13 @@
               <!-- <p>נדבקו</p> -->
               <p id="casesIL"> NEW CASES (LAST 24H) <br> +{{ stat.total_new_cases_today }} </p>
               <!-- <p> חולים חדשים</p> -->
-              <p> TOTAL DEATHS <br> {{ stat.total_deaths }} </p>
+              <p id="deathsIL"> TOTAL DEATHS <br> {{ stat.total_deaths }} </p>
               <!-- <p> מתים</p> -->
-              <p> NEW DEATHS (LAST 24H) <br> +{{ stat.total_new_deaths_today }} </p>
+              <p id="deathsIL"> NEW DEATHS (LAST 24H) <br> +{{ stat.total_new_deaths_today }} </p>
               <!-- <p>ביממה האחרונה</p> -->
-              <p> TOTAL RECOVERED <br> {{ stat.total_recovered }} </p>
+              <p id="otherIL"> TOTAL RECOVERED <br> {{ stat.total_recovered }} </p>
               <!-- <p>החלימו</p> -->
-              <p> SERIOUS CASES <br> {{ stat.total_serious_cases }} </p>
+              <p id="otherIL"> SERIOUS CASES <br> {{ stat.total_serious_cases }} </p>
               <!-- <p>במצב קשה</p> -->
             </div>
           </div>
@@ -30,7 +30,7 @@
         <div class="centertxt"></div>
           <span id="totalCases">{{ stat.total_cases }}</span>
         </div>
-   </div>
+    </div>
 
 
 

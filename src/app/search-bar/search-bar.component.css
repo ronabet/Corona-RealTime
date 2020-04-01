@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
 .search-box{
     display: flex;
     background: #26273b;
     align-items: center;
     justify-content: flex-end;
+    font-family: 'Pathway Gothic One', sans-serif;
     width: 65vw;
     height: 45px;
     border-radius: 30px;
@@ -14,13 +16,13 @@
 
 .input-box{
     border-color: transparent;
-    width: 75%;
+    width: 91%;
     background-color: transparent;
-    direction: rtl;
+    direction: ltr;
     outline: none;
     background: #26273b;
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 14px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
     margin-right: 10px;
     line-height: 1.43;
 }
@@ -28,7 +30,6 @@
 .icon-box{
     width: 15px;
     height: 16px;
-    /* margin-top: 5px; */
     margin-right: 10px;
     object-fit: contain;
 }
