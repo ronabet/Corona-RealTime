@@ -33,5 +33,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('qa', { relativeTo: this.route });
   }
 
+  onReload() {
+    window.location.reload();
+}
+
 
 }

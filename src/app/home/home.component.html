@@ -1,21 +1,15 @@
 <h4 id="title">CORONAVIRUS DISEASE REAL-TIME STATISTICS</h4>
 
-      <div *ngFor="let stat of StatsArray">
+      <div *ngFor="let stat of ILStatsArray">
           <div class="israelCard">
             <h2 id="IsraelTitle">COVID-19 ISRAEL STATISTICS</h2>
             <div class="grid-container">
               <p id="casesIL"> TOTAL CASES <br> {{stat.total_cases}} </p>
-              <!-- <p>נדבקו</p> -->
               <p id="casesIL"> NEW CASES (LAST 24H) <br> +{{ stat.total_new_cases_today }} </p>
-              <!-- <p> חולים חדשים</p> -->
               <p id="deathsIL"> TOTAL DEATHS <br> {{ stat.total_deaths }} </p>
-              <!-- <p> מתים</p> -->
               <p id="deathsIL"> NEW DEATHS (LAST 24H) <br> +{{ stat.total_new_deaths_today }} </p>
-              <!-- <p>ביממה האחרונה</p> -->
               <p id="otherIL"> TOTAL RECOVERED <br> {{ stat.total_recovered }} </p>
-              <!-- <p>החלימו</p> -->
               <p id="otherIL"> SERIOUS CASES <br> {{ stat.total_serious_cases }} </p>
-              <!-- <p>במצב קשה</p> -->
             </div>
           </div>
       </div>
@@ -26,7 +20,7 @@
 
     <div class="container2">
       <div (click)="openDialog()" class="card" *ngFor="let stat of StatsToDisplay" >
-        <span id="countryName">{{ stat.title | uppercase }}</span>
+        <span id="countryName">{{ stat.title }}</span>
         <div class="centertxt"></div>
           <span id="totalCases">{{ stat.total_cases }}</span>
         </div>

@@ -15,7 +15,7 @@ export interface DialogData {
 
 
 export class HomeComponent implements OnInit {
-  StatsArray: CountryStatisticModel[] = [];
+  ILStatsArray: CountryStatisticModel[] = [];
   ResStat: CountryStatisticModel[] = [];
   AllCountriesArray: CountryStatisticModel[] = [];
   StatsToDisplay: CountryStatisticModel[] = [];
@@ -30,8 +30,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getIsrael();
-    this.getAllCountries();
+    // this.getAllCountries();
     this.searchTextChanged(this.searchText);
+    this.getAllCountries();
   }
 
 // 
@@ -45,43 +46,43 @@ export class HomeComponent implements OnInit {
     });
   }
   
-// 
-  getAllCountries() {
-    this.api.getAllCountriesStat().subscribe((res: any) => {
-      this.ResStat = res.countryitems["0"];
-      Object.keys(this.ResStat).forEach(element => {
-        // console.log(this.ResStat[element].title.toUpperCase());
-           this.AllCountriesArray.push({
-          "title": this.ResStat[element].title,
-          "total_cases": this.ResStat[element].total_cases,
-          "total_recovered": this.ResStat[element].total_recovered,
-          "total_deaths": this.ResStat[element].total_deaths,
-          "total_new_cases_today": this.ResStat[element].total_new_cases_today,
-          "total_new_deaths_today": this.ResStat[element].total_new_deaths_today,
-          "total_serious_cases": this.ResStat[element].total_serious_cases
-        }) 
-      });
 
-      this.StatsToDisplay = this.AllCountriesArray;
-    });
-  }
+    getAllCountries(){
+      this.api.getAllCountriesSecondery().subscribe((res: any) => {
+        let resCountries = res.countries_stat;
+        resCountries.forEach(element => {
+            this.AllCountriesArray.push({
+            "title": element.country_name,
+            "total_cases": element.cases,
+            "total_recovered": element.total_recovered,
+            "total_deaths": element.deaths,
+            "total_new_cases_today": element.new_cases,
+            "total_new_deaths_today": element.new_deaths,
+            "total_serious_cases": element.serious_critical
+          }) 
+        });
+        this.StatsToDisplay = this.AllCountriesArray;
+      });
+    }
 
     getIsrael(){
-        this.api.getAllCountriesStat().subscribe((res: any) => {
-          this.ResStat = res.countryitems;
-          let index = 76;
-          this.StatsArray.push({
-            "title": this.ResStat["0"][index].title,
-            "total_cases": this.ResStat["0"][index].total_cases,
-            "total_recovered": this.ResStat["0"][index].total_recovered,
-            "total_deaths": this.ResStat["0"][index].total_deaths,
-            "total_new_cases_today": this.ResStat["0"][index].total_new_cases_today,
-            "total_new_deaths_today": this.ResStat["0"][index].total_new_deaths_today,
-            "total_serious_cases": this.ResStat["0"][index].total_serious_cases
-        })
-          console.log(this.StatsArray);
+      this.api.getIsraelStat().subscribe((res: any) => {
+        let latestStatIL = res.latest_stat_by_country["0"];
+        console.log(res.latest_stat_by_country);
+        this.ILStatsArray.push({
+          "title": latestStatIL.country_name,
+          "total_cases": latestStatIL.total_cases,
+          "total_recovered": latestStatIL.total_recovered,
+          "total_deaths": latestStatIL.total_deaths,
+          "total_new_cases_today": latestStatIL.new_cases,
+          "total_new_deaths_today": latestStatIL.new_deaths,
+          "total_serious_cases": latestStatIL.serious_critical
       })
+      console.log(this.ILStatsArray);
+      
+    })
     }
+
 
     searchTextChanged(text: string) {
       this.searchText = this.stripWhiteSpaces(text);
@@ -91,7 +92,7 @@ export class HomeComponent implements OnInit {
   
     addTasksToDisplay(countriesStats: CountryStatisticModel[]) {
       countriesStats.forEach((AllCountriesArray) => {
-        if ((AllCountriesArray.title).match(this.searchText)) {
+        if ((AllCountriesArray.title).includes(this.searchText)) {
           this.StatsToDisplay.push(AllCountriesArray);
         }
       })
@@ -101,11 +102,6 @@ export class HomeComponent implements OnInit {
       return str.replace(/^\s+|\s+$/g, '');
     }
   
-
-
-
-
-
 
 }
 

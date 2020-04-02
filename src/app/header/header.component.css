@@ -7,8 +7,6 @@ span {cursor: context-menu;}
 }
 
 
-
-
 .header-wrapper {
     width: 100%;
     align-items: center;
@@ -17,7 +15,7 @@ span {cursor: context-menu;}
     grid-template-areas: "a b c d e f g h i j";
     grid-template-columns: repeat(10,1fr);
     background-color: #0e1020;
-    height: 10vh;
+    height: 7vh;
     box-shadow: 0 5px 13px 0 #070911;
     top: 0%;
     z-index: 1;
