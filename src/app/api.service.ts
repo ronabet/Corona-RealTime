@@ -12,6 +12,14 @@ export interface CountryStatisticModel {
   "total_serious_cases": string
 }
 
+export interface WorldStatisticModel {
+  "total_cases": string;
+  "total_deaths": string;
+  "total_recovered": string;
+  "new_cases": string;
+  "new_deaths": string;
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -42,5 +50,11 @@ export class ApiService {
   getIsraelStat(){
     return this.http.get(config.GET_ISRAEL, this.options);
   }
+
+  getWorldStat(){
+    return this.http.get(config.GET_WORLD_STAT, { headers: this.headersOptios });
+  }
+
+
 
 }

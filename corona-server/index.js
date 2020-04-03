@@ -3,11 +3,12 @@ const app = express();
 const http = require('http').Server(app);
 const bodyParser = require('body-parser');
 
-var port = process.env.PORT || 80;
 
+var port = process.env.PORT || 80;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -15,7 +16,9 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/', express.static(__dirname + './public'));
+
+app.use('/', express.static(__dirname + '/public'));
+
 
 http.listen(port, function(){
     console.log('listening on *: ' + port);

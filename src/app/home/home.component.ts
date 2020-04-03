@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, CountryStatisticModel } from '../api.service';
+import { ApiService, CountryStatisticModel, WorldStatisticModel } from '../api.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 
@@ -15,37 +15,25 @@ export interface DialogData {
 
 
 export class HomeComponent implements OnInit {
+  
   ILStatsArray: CountryStatisticModel[] = [];
   ResStat: CountryStatisticModel[] = [];
   AllCountriesArray: CountryStatisticModel[] = [];
   StatsToDisplay: CountryStatisticModel[] = [];
   searchText: string = "";
   open = true;
-
   animal: string;
   name: string;
-
+  WorldStatResObject: any;
 
   constructor(public api: ApiService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.getWorldStat();
     this.getIsrael();
-    // this.getAllCountries();
     this.searchTextChanged(this.searchText);
     this.getAllCountries();
   }
-
-// 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DialogComponent, { width: '400px', height: '450px' , data: {name: this.name, animal: this.animal}, panelClass: 'myapp-background'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
-  }
-  
 
     getAllCountries(){
       this.api.getAllCountriesSecondery().subscribe((res: any) => {
@@ -70,19 +58,40 @@ export class HomeComponent implements OnInit {
         let latestStatIL = res.latest_stat_by_country["0"];
         console.log(res.latest_stat_by_country);
         this.ILStatsArray.push({
-          "title": latestStatIL.country_name,
-          "total_cases": latestStatIL.total_cases,
-          "total_recovered": latestStatIL.total_recovered,
-          "total_deaths": latestStatIL.total_deaths,
-          "total_new_cases_today": latestStatIL.new_cases,
-          "total_new_deaths_today": latestStatIL.new_deaths,
-          "total_serious_cases": latestStatIL.serious_critical
+            "title": latestStatIL.country_name,
+            "total_cases": latestStatIL.total_cases,
+            "total_recovered": latestStatIL.total_recovered,
+            "total_deaths": latestStatIL.total_deaths,
+            "total_new_cases_today": latestStatIL.new_cases,
+            "total_new_deaths_today": latestStatIL.new_deaths,
+            "total_serious_cases": latestStatIL.serious_critical
+        }) 
       })
-      console.log(this.ILStatsArray);
-      
-    })
     }
 
+    getWorldStat(){
+      this.api.getWorldStat().subscribe((res: any) => {
+        console.log(res);
+        this.WorldStatResObject = {
+          "total_cases": res.total_cases,
+          "total_recovered": res.total_recovered,
+          "total_deaths": res.total_deaths,
+          "total_new_cases_today": res.new_cases,
+          "total_new_deaths_today": res.new_deaths,
+        };
+        console.log(this.WorldStatResObject);
+      })
+      return this.WorldStatResObject;
+    }
+
+    openDialog(): void {
+      const dialogRef = this.dialog.open(DialogComponent, { width: '400px', height: '450px' , data: {name: "hahahahaha", animal: this.animal}, panelClass: 'myapp-background'
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.animal = result;
+      });
+    }
 
     searchTextChanged(text: string) {
       this.searchText = this.stripWhiteSpaces(text);

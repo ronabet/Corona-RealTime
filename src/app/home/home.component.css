@@ -28,7 +28,6 @@
   font-style: normal;
   line-height: 0.83;
   letter-spacing: normal;
-
 }
 
 #IsraelTitle{
@@ -67,6 +66,7 @@
   color: #6afff3;
   font-size: 1.8vw;
   transition: 0.2s;
+  text-align: center;
 }
 
 #casesIL:hover {
@@ -78,6 +78,7 @@
   color: #bf71ff;
   font-size: 1.8vw;
   transition: 0.2s;
+  text-align: center;
 }
 
 #deathsIL:hover {
@@ -89,6 +90,7 @@
   color: #9193a8;
   font-size: 1.8vw;
   transition: 0.2s;
+  text-align: center;
 }
 
 #otherIL:hover {
@@ -166,8 +168,29 @@ h2 {
   transition: 0.2s;
 }
 
+.grid-container-row {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+}
+
+
+
 .israelCard:hover{
   box-shadow: 0 5px 14px 0 black;
+}
+
+.WorldlCard{
+  padding: 40px;
+  width: 65%;
+  height: 18vh;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: inherit;
+  border-radius: 20px;
+  background-color: #26273b;
+  margin: 60px auto;
+  transition: 0.2s;
+
 }
 
 .highlight {
