@@ -54,13 +54,13 @@ span {cursor: context-menu;}
     text-align: center;
     font-family: 'Pathway Gothic One', sans-serif;
     grid-area: f;
-    font-size: 1.3rem;
+    font-size: 25px;
     color: white;
     cursor: pointer;
     position: relative;
     top: -1vh;
     transition: 0.3s;
-    left: 25px;
+
 }
 
 #info:hover{

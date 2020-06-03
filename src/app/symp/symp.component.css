@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     display: grid;
+    justify-items: center;
     grid-template-columns: auto;
     /* grid-gap: 30px; */
     padding: 10px;
@@ -34,13 +35,14 @@
     font-style: normal;
     line-height: 0.83;
     letter-spacing: normal;
-    margin-bottom: 30px;   
+    margin-bottom: 30px;
 }
 
 .images{
     margin-top: 8vh;
-    width: 22vw;
+    width: 350px;
     transition: 0.3s;
+    justify-self: center;
 }
 
 .images:hover{
@@ -49,8 +51,9 @@
 }
 
 #coughimg {
-    width: 22vw;
+    width: 350px;
     transition: 0.3s;
+    justify-self: center;
 }
 
 #coughimg:hover{
