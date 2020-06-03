@@ -17,28 +17,28 @@ export class InfoComponent implements OnInit {
   FactsData(){
     this.FactsArray = [
       {
-        title: "harta1",
-        description: "class InfoComponent implements OnInitexport implements OnInitexportimplements OnInitexportimplements OnInitexportimplements OnInitexport class InfoComponent implements OnInit class InfoComponent implements class InfoComponent implements class InfoComponent implements class InfoComponent implements"
+        title: "",
+        description: ""
       },
       {
-        title: "harta2",
-        description: "harta2"
+        title: "",
+        description: ""
       },
       {
-        title: "harta2",
-        description: "harta2"
+        title: "",
+        description: ""
       },
       {
-        title: "harta2",
-        description: "harta2"
+        title: "",
+        description: ""
       },
       {
-        title: "harta2",
-        description: "harta2"
+        title: "",
+        description: ""
       },
       {
-        title: "harta2",
-        description: "harta2"
+        title: "",
+        description: ""
       }
     ];
     return this.FactsArray;
