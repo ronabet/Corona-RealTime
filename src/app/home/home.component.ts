@@ -15,7 +15,7 @@ export interface DialogData {
 
 
 export class HomeComponent implements OnInit {
-  
+
   ILStatsArray: CountryStatisticModel[] = [];
   ResStat: CountryStatisticModel[] = [];
   AllCountriesArray: CountryStatisticModel[] = [];
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
             "total_new_cases_today": element.new_cases,
             "total_new_deaths_today": element.new_deaths,
             "total_serious_cases": element.serious_critical
-          }) 
+          })
         });
         this.StatsToDisplay = this.AllCountriesArray;
       });
@@ -56,7 +56,6 @@ export class HomeComponent implements OnInit {
     getIsrael(){
       this.api.getIsraelStat().subscribe((res: any) => {
         let latestStatIL = res.latest_stat_by_country["0"];
-        console.log(res.latest_stat_by_country);
         this.ILStatsArray.push({
             "title": latestStatIL.country_name,
             "total_cases": latestStatIL.total_cases,
@@ -65,13 +64,12 @@ export class HomeComponent implements OnInit {
             "total_new_cases_today": latestStatIL.new_cases,
             "total_new_deaths_today": latestStatIL.new_deaths,
             "total_serious_cases": latestStatIL.serious_critical
-        }) 
+        })
       })
     }
 
     getWorldStat(){
       this.api.getWorldStat().subscribe((res: any) => {
-        console.log(res);
         this.WorldStatResObject = {
           "total_cases": res.total_cases,
           "total_recovered": res.total_recovered,
@@ -79,13 +77,13 @@ export class HomeComponent implements OnInit {
           "total_new_cases_today": res.new_cases,
           "total_new_deaths_today": res.new_deaths,
         };
-        console.log(this.WorldStatResObject);
+
       })
       return this.WorldStatResObject;
     }
 
     openDialog(): void {
-      const dialogRef = this.dialog.open(DialogComponent, { width: '400px', height: '450px' , data: {name: "hahahahaha", animal: this.animal}, panelClass: 'myapp-background'
+      const dialogRef = this.dialog.open(DialogComponent, { width: '400px', height: '450px' , data: {name: "total"}, panelClass: 'myapp-background'
       });
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
@@ -98,7 +96,7 @@ export class HomeComponent implements OnInit {
       this.StatsToDisplay = [];
      this.addTasksToDisplay(this.AllCountriesArray);
     }
-  
+
     addTasksToDisplay(countriesStats: CountryStatisticModel[]) {
       countriesStats.forEach((AllCountriesArray) => {
         if ((AllCountriesArray.title).includes(this.searchText)) {
@@ -106,21 +104,21 @@ export class HomeComponent implements OnInit {
         }
       })
     }
-  
+
     stripWhiteSpaces(str) {
       return str.replace(/^\s+|\s+$/g, '');
     }
-  
+
 
 }
 
 
 
-    
 
-    
 
-  
+
+
+
 
 
 

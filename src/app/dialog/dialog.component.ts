@@ -16,7 +16,7 @@ export class DialogComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.data);
+    console.log(this.data.name);
     this.total_cases = this.data.name;
     
   }

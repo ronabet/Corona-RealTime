@@ -72,7 +72,7 @@
 
 #casesIL:hover {
   color: #6afff3;
-  transform: translate(0px, -10px);
+  transform: translate(0px, -20px);
   font-size: 2vw ;
 }
 
@@ -87,7 +87,7 @@
 #deathsIL:hover {
   color: #bf71ff;
   font-size: 2vw;
-  transform: translate(0px, -10px);
+  transform: translate(0px, -20px);
 }
 
 #otherIL {
@@ -101,7 +101,7 @@
 #otherIL:hover {
   color: #9193a8;
   font-size: 2vw ;
-  transform: translate(0px, -10px);
+  transform: translate(0px, -20px);
 }
 
 .item1 {
