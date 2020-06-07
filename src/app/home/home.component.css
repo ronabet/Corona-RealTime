@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap'); */
 
 /* #1cbfff */
 #title{
@@ -68,7 +68,6 @@
   font-size: 28px;
   transition: 0.2s;
   text-align: center;
-  font-style: normal;
   cursor: context-menu;
 }
 
@@ -83,9 +82,8 @@
   font-size: 28px;
   transition: 0.2s;
   text-align: center;
-  font-style: normal;
   cursor: context-menu;
-  min-width: 100px;
+  /* min-width: 70px; */
 }
 
 #deathsIL:hover {
@@ -97,7 +95,6 @@
 #otherIL {
   color: #9193a8;
   font-size: 28px;
-  font-style: normal;
   transition: 0.2s;
   text-align: center;
   cursor: context-menu;
@@ -216,7 +213,37 @@ h2 {
   color: white;
 }
 
-@media (max-width: 925px) {
+h1{
+  margin: 1em 0;
+  border-bottom: 1px dashed;
+  padding-bottom: 1em;
+  font-weight: lighter;
+}
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#loaderContainer{
+  display: grid;
+  justify-items: center;
+}
+
+svg path,
+svg rect{
+  fill: rgb(255, 255, 255);
+}
+
+
+
+
+@media (max-width: 943px) {
   #deathsIL {
     color: #ffffff;
     font-size: 17px;
@@ -242,34 +269,4 @@ h2 {
 
 .component-color {
   background-color: #0e1020;
-}
-
-
-
-h1{
-  margin: 1em 0;
-  border-bottom: 1px dashed;
-  padding-bottom: 1em;
-  font-weight: lighter;
-}
-p{
-  font-style: italic;
-}
-.loader{
-  margin: 0 0 2em;
-  height: 100px;
-  width: 20%;
-  text-align: center;
-  padding: 1em;
-  margin: 0 auto 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-/*
-  Set the color of the icon
-*/
-svg path,
-svg rect{
-  fill: #FF6700;
 }
