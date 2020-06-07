@@ -82,8 +82,8 @@ export class HomeComponent implements OnInit {
       return this.WorldStatResObject;
     }
 
-    openDialog(): void {
-      const dialogRef = this.dialog.open(DialogComponent, { width: '400px', height: '450px' , data: {name: "total"}, panelClass: 'myapp-background'
+    openDialog(country: string) {
+      const dialogRef = this.dialog.open(DialogComponent, { width: '650px', height: '550px' , data: {name: country}, panelClass: 'myapp-background'
       });
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');

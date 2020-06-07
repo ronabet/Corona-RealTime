@@ -34,17 +34,22 @@ export class ApiService {
   params1 = new HttpParams()
   .set('country', 'israel');
 
-  headersOptios = new HttpHeaders()
+  Countryparams = new HttpParams()
+  .set('country', "");
+
+  headersOptions = new HttpHeaders()
   .set('x-rapidapi-key', 'fd565ad5a2msh8156f64d17d4454p1c66fdjsn1f30d420a80a')
 
-  options = { params: this.params1, headers: this.headersOptios };
+  options = { params: this.params1, headers: this.headersOptions };
+
+  Countryoptions = { params: this.Countryparams, headers: this.headersOptions };
 
   getAllCountriesStat(){
     return this.http.get(config.GET_ALL_COUNTRIE_STAT_URL);
   }
 
   getAllCountriesSecondery(){
-    return this.http.get(config.GET_ALL_COUNTRIES_API_URL2, { headers: this.headersOptios});
+    return this.http.get(config.GET_ALL_COUNTRIES_API_URL2, { headers: this.headersOptions});
   }
 
   getIsraelStat(){
@@ -52,7 +57,11 @@ export class ApiService {
   }
 
   getWorldStat(){
-    return this.http.get(config.GET_WORLD_STAT, { headers: this.headersOptios });
+    return this.http.get(config.GET_WORLD_STAT, { headers: this.headersOptions });
+  }
+
+  getCountryStat(headers){
+    return this.http.get(config.GET_ISRAEL, headers);
   }
 
 

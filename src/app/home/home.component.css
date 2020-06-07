@@ -209,7 +209,7 @@ h2 {
 #countryName{
   font-family: 'Pathway Gothic One', sans-serif;
   font-weight: inherit;
-  font-size: 2vw;
+  font-size: 30px;
   color: white;
 }
 
@@ -270,3 +270,4 @@ svg rect{
 .component-color {
   background-color: #0e1020;
 }
+

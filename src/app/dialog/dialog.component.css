@@ -2,3 +2,21 @@
 .md-dialog-container {
     background-color: turquoise;
 }
+
+/* #cancel
+{
+  position: relative;
+  top: 350px;
+  left: 170px;
+} */
+
+svg path,
+svg rect{
+  fill: rgb(255, 255, 255);
+}
+
+.grid-container{
+  display: grid;
+  justify-items: center;
+  margin-top: 34%;
+}
