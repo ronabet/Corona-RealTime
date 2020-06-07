@@ -213,6 +213,36 @@ h2 {
   color: white;
 }
 
+h1{
+  margin: 1em 0;
+  border-bottom: 1px dashed;
+  padding-bottom: 1em;
+  font-weight: lighter;
+}
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#loaderContainer{
+  display: grid;
+  justify-items: center;
+}
+
+svg path,
+svg rect{
+  fill: rgb(255, 255, 255);
+}
+
+
+
+
 @media (max-width: 943px) {
   #deathsIL {
     color: #ffffff;
