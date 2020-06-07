@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
         let resCountries = res.countries_stat;
         resCountries.forEach(element => {
             this.AllCountriesArray.push({
-            "title": element.country_name,
+            "title": element.country_name.toUpperCase(),
             "total_cases": element.cases,
             "total_recovered": element.total_recovered,
             "total_deaths": element.deaths,

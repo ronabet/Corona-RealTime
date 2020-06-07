@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
 /* #1cbfff */
 #title{
   text-align: center;
@@ -67,6 +68,7 @@
   font-size: 28px;
   transition: 0.2s;
   text-align: center;
+  font-style: normal;
   cursor: context-menu;
 }
 
@@ -81,7 +83,9 @@
   font-size: 28px;
   transition: 0.2s;
   text-align: center;
+  font-style: normal;
   cursor: context-menu;
+  min-width: 100px;
 }
 
 #deathsIL:hover {
@@ -93,6 +97,7 @@
 #otherIL {
   color: #9193a8;
   font-size: 28px;
+  font-style: normal;
   transition: 0.2s;
   text-align: center;
   cursor: context-menu;
@@ -121,7 +126,7 @@ h2 {
   text-align: center;
 }
 
-.container2{
+.cards-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -211,27 +216,60 @@ h2 {
   color: white;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 925px) {
   #deathsIL {
     color: #ffffff;
     font-size: 17px;
-    transition: 0.2s;
     text-align: center;
+    pointer-events:none;
   }
   #otherIL {
-    color: #9193a8;
     font-size: 17px;
-    transition: 0.2s;
     text-align: center;
+    pointer-events:none;
   }
+
   #casesIL {
-    color: #6afff3;
     font-size: 17px;
-    transition: 0.2s;
     text-align: center;
+    pointer-events:none;
+  }
+
+  .israelCard {
+    height: 25vh;
   }
 }
 
-.rontipesh {
+.component-color {
   background-color: #0e1020;
+}
+
+
+
+h1{
+  margin: 1em 0;
+  border-bottom: 1px dashed;
+  padding-bottom: 1em;
+  font-weight: lighter;
+}
+p{
+  font-style: italic;
+}
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect{
+  fill: #FF6700;
 }
