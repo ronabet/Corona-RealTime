@@ -37,16 +37,20 @@ export class DialogComponent implements OnInit {
     .set('x-rapidapi-key', 'fd565ad5a2msh8156f64d17d4454p1c66fdjsn1f30d420a80a')
     this.Countryoptions = { params: this.Countryparams, headers: this.headersOptions };
     this.api.getCountryStat(this.Countryoptions).subscribe((res: any) => {
+      let resFiltered = res.latest_stat_by_country[0];
       this.resReturn = true;
       console.log(res);
       this.CountryStatsObject = {
-        "active_cases": res.latest_stat_by_country[0].active_cases,
-        "new_cases": res.latest_stat_by_country[0].new_cases,
-        "new_deaths": res.latest_stat_by_country[0].new_deaths,
-        "total_deaths": res.latest_stat_by_country[0].total_deaths,
-        "total_recovered": res.latest_stat_by_country[0].total_recovered,
-        "total_tests": res.latest_stat_by_country[0].total_tests
+        "active_cases": resFiltered ? resFiltered.active_cases : "N/A",
+        "new_cases": resFiltered.new_cases ? resFiltered.new_cases : "N/A",
+        "new_deaths": resFiltered.new_deaths ? resFiltered.new_deaths : "N/A",
+        "total_deaths": resFiltered.total_deaths ? resFiltered.total_deaths : "N/A",
+        "total_recovered": resFiltered.total_recovered ? resFiltered.total_recovered : "N/A",
+        "total_tests": resFiltered.total_tests ? resFiltered.total_tests : "N/A",
+        "total_test_by_day": resFiltered.total_tests_per1m ? resFiltered.total_tests_per1m : "N/A"
       }
+      console.log(res.latest_stat_by_country[0].new_cases);
+
     });
   }
 

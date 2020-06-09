@@ -61,8 +61,8 @@ export class HomeComponent implements OnInit {
             "total_cases": latestStatIL.total_cases,
             "total_recovered": latestStatIL.total_recovered,
             "total_deaths": latestStatIL.total_deaths,
-            "total_new_cases_today": latestStatIL.new_cases,
-            "total_new_deaths_today": latestStatIL.new_deaths,
+            "total_new_cases_today": latestStatIL.new_cases ? latestStatIL.new_cases : "0",
+            "total_new_deaths_today": latestStatIL.new_deaths ? latestStatIL.new_deaths : "0",
             "total_serious_cases": latestStatIL.serious_critical
         })
       })

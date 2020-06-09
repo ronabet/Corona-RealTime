@@ -4,7 +4,7 @@ const http = require('http').Server(app);
 const bodyParser = require('body-parser');
 
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3500;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
 });
 
 
-app.use('/', express.static(__dirname + '/public'));
+app.use('/', express.static(__dirname + '/front/dist/corona'));
 
 
 http.listen(port, function(){
