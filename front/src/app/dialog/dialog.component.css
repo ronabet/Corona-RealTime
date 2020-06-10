@@ -3,27 +3,41 @@
     background-color: turquoise;
 }
 
-/* #cancel
-{
-  position: relative;
-  top: 350px;
-  left: 170px;
-} */
+/deep/ .mat-dialog-container {
+  overflow-y: hidden !important;
+}
 
 svg path,
 svg rect{
   fill: rgb(255, 255, 255);
 }
 
-.grid-container{
+.loader-grid-container{
   display: grid;
   justify-items: center;
-  margin-top: 34%;
+  margin-top: 26%;
+}
+
+
+#cancel{
+  bottom: 25px;
 }
 
 
 .stats-grid-container {
   display: grid;
   grid-template-columns: auto auto;
-  padding: 10px;
+  color: #6afff3;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  grid-gap: 4px;
+}
+
+
+@media (max-width: 450px) {
+  .loader-grid-container{
+    margin-top: 36%;
+  }
+
 }

@@ -83,10 +83,9 @@ export class HomeComponent implements OnInit {
     }
 
     openDialog(country: string) {
-      const dialogRef = this.dialog.open(DialogComponent, { width: '650px', height: '550px' , data: {name: country}, panelClass: 'myapp-background'
+      const dialogRef = this.dialog.open(DialogComponent, { width: '450px', height: '345px' , data: {name: country}, panelClass: 'myapp-background'
       });
       dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
         this.animal = result;
       });
     }

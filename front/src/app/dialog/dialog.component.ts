@@ -39,7 +39,6 @@ export class DialogComponent implements OnInit {
     this.api.getCountryStat(this.Countryoptions).subscribe((res: any) => {
       let resFiltered = res.latest_stat_by_country[0];
       this.resReturn = true;
-      console.log(res);
       this.CountryStatsObject = {
         "active_cases": resFiltered ? resFiltered.active_cases : "N/A",
         "new_cases": resFiltered.new_cases ? resFiltered.new_cases : "N/A",
@@ -51,8 +50,6 @@ export class DialogComponent implements OnInit {
         "serious_critical": resFiltered.serious_critical ? resFiltered.serious_critical : "N/A",
         "total_tests_per1m": resFiltered.total_tests_per1m ? resFiltered.total_tests_per1m : "N/A"
       }
-      console.log(res.latest_stat_by_country[0].new_cases);
-
     });
   }
 
