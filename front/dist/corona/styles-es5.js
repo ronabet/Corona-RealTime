@@ -527,11 +527,11 @@
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! C:\Users\Ron Nabet\Desktop\Corona\corona-server\front\node_modules\@angular\material\prebuilt-themes\pink-bluegrey.css */
+    /*! C:\Users\Ron Nabet\Desktop\Corona\front\node_modules\@angular\material\prebuilt-themes\pink-bluegrey.css */
     "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css");
 
     module.exports = __webpack_require__(
-    /*! C:\Users\Ron Nabet\Desktop\Corona\corona-server\front\src\styles.css */
+    /*! C:\Users\Ron Nabet\Desktop\Corona\front\src\styles.css */
     "./src/styles.css");
     /***/
   }
