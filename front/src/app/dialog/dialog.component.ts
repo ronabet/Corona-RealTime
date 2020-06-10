@@ -47,7 +47,9 @@ export class DialogComponent implements OnInit {
         "total_deaths": resFiltered.total_deaths ? resFiltered.total_deaths : "N/A",
         "total_recovered": resFiltered.total_recovered ? resFiltered.total_recovered : "N/A",
         "total_tests": resFiltered.total_tests ? resFiltered.total_tests : "N/A",
-        "total_test_by_day": resFiltered.total_tests_per1m ? resFiltered.total_tests_per1m : "N/A"
+        "total_test_by_day": resFiltered.total_tests_per1m ? resFiltered.total_tests_per1m : "N/A",
+        "serious_critical": resFiltered.serious_critical ? resFiltered.serious_critical : "N/A",
+        "total_tests_per1m": resFiltered.total_tests_per1m ? resFiltered.total_tests_per1m : "N/A"
       }
       console.log(res.latest_stat_by_country[0].new_cases);
 

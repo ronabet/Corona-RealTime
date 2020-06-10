@@ -5,11 +5,11 @@
         <div class="WorldlCard">
           <h2 id="IsraelTitle">COVID-19 WORLD STATISTICS</h2>
           <div class="grid-container-row">
-            <p id="casesIL"> TOTAL CASES <br> {{ WorldStatResObject.total_cases }} </p>
-            <p id="casesIL"> NEW CASES (24H) <br> +{{ WorldStatResObject.total_new_cases_today }} </p>
-            <p id="deathsIL"> TOTAL DEATHS <br> {{ WorldStatResObject.total_deaths }} </p>
-            <p id="deathsIL"> NEW DEATHS (24H) <br> +{{ WorldStatResObject.total_new_deaths_today }} </p>
-            <p id="otherIL"> TOTAL RECOVERED <br> {{ WorldStatResObject.total_recovered }} </p>
+            <p id="cases"> TOTAL CASES <br> {{ WorldStatResObject.total_cases }} </p>
+            <p id="cases"> NEW CASES (24H) <br> +{{ WorldStatResObject.total_new_cases_today }} </p>
+            <p id="deaths"> TOTAL DEATHS <br> {{ WorldStatResObject.total_deaths }} </p>
+            <p id="deaths"> NEW DEATHS (24H) <br> +{{ WorldStatResObject.total_new_deaths_today }} </p>
+            <p id="otherStats"> TOTAL RECOVERED <br> {{ WorldStatResObject.total_recovered }} </p>
           </div>
         </div>
 
@@ -18,12 +18,12 @@
           <div class="israelCard">
             <h2 id="IsraelTitle">COVID-19 ISRAEL STATISTICS</h2>
             <div class="grid-container">
-              <p id="casesIL"> TOTAL CASES <br> {{stat.total_cases}} </p>
-              <p id="casesIL"> NEW CASES (24H) <br> {{ stat.total_new_cases_today }} </p>
-              <p id="deathsIL"> TOTAL DEATHS <br> {{ stat.total_deaths }} </p>
-              <p id="deathsIL"> NEW DEATHS (24H) <br> {{ stat.total_new_deaths_today }} </p>
-              <p id="otherIL"> TOTAL RECOVERED <br> {{ stat.total_recovered }} </p>
-              <p id="otherIL"> SERIOUS CASES <br> {{ stat.total_serious_cases }} </p>
+              <p id="cases"> TOTAL CASES <br> {{stat.total_cases}} </p>
+              <p id="cases"> NEW CASES (24H) <br> {{ stat.total_new_cases_today }} </p>
+              <p id="deaths"> TOTAL DEATHS <br> {{ stat.total_deaths }} </p>
+              <p id="deaths"> NEW DEATHS (24H) <br> {{ stat.total_new_deaths_today }} </p>
+              <p id="otherStats"> TOTAL RECOVERED <br> {{ stat.total_recovered }} </p>
+              <p id="otherStats"> SERIOUS CASES <br> {{ stat.total_serious_cases }} </p>
             </div>
           </div>
       </div>

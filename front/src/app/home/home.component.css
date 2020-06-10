@@ -63,7 +63,7 @@
   font-size: 30px;
 }
 
-#casesIL {
+#cases {
   color: #6afff3;
   font-size: 28px;
   transition: 0.2s;
@@ -71,13 +71,13 @@
   cursor: context-menu;
 }
 
-#casesIL:hover {
+#cases:hover {
   color: #6afff3;
   transform: translate(0px, -20px);
   font-size: 2vw ;
 }
 
-#deathsIL {
+#deaths {
   color: #bf71ff;
   font-size: 28px;
   transition: 0.2s;
@@ -86,13 +86,13 @@
   /* min-width: 70px; */
 }
 
-#deathsIL:hover {
+#deaths:hover {
   color: #bf71ff;
   font-size: 2vw;
   transform: translate(0px, -20px);
 }
 
-#otherIL {
+#otherStats {
   color: #9193a8;
   font-size: 28px;
   transition: 0.2s;
@@ -100,7 +100,7 @@
   cursor: context-menu;
 }
 
-#otherIL:hover {
+#otherStats:hover {
   color: #9193a8;
   font-size: 2vw ;
   transform: translate(0px, -20px);
@@ -138,30 +138,36 @@ h2 {
   background-color: #26273b;
   padding: 2px 16px;
   text-align: center;
-  height: 18vh;
+  height: 110px;
   font-weight: inherit;
   border-radius: 6px;
   font-family: 'Pathway Gothic One', sans-serif;
-  width: 30vh;
+  width: 180px;
 }
 
 .card:hover{
   cursor: pointer;
-  width: 35vh;
+  width: 200px;
   box-shadow: 0 5px 14px 0 black;
   background-color: #26273b;
-  height: 20vh;
+  height: 120px;
   color: #ffffff;
+}
+
+.card:hover #totalCases {
+  top: 10px;
+  /* transition: 0.2s; */
 }
 
 #totalCases{
   color: #6afff3;
-  top: 3vh;
+  top: 7px;
   font-size: 40px;
   text-align: center;
   font-family: 'Pathway Gothic One', sans-serif;
   font-weight: 100;
   position: relative;
+  transition: 0.3s;
 }
 
 .israelCard {
@@ -244,19 +250,19 @@ svg rect{
 
 
 @media (max-width: 943px) {
-  #deathsIL {
+  #deaths {
     color: #ffffff;
     font-size: 17px;
     text-align: center;
     pointer-events:none;
   }
-  #otherIL {
+  #otherStats {
     font-size: 17px;
     text-align: center;
     pointer-events:none;
   }
 
-  #casesIL {
+  #cases {
     font-size: 17px;
     text-align: center;
     pointer-events:none;

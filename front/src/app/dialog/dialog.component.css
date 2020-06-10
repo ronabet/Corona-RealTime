@@ -20,3 +20,10 @@ svg rect{
   justify-items: center;
   margin-top: 34%;
 }
+
+
+.stats-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
