@@ -7,41 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  FactsArray: Object[] = [];
   constructor() { }
 
   ngOnInit(): void {
-    this.FactsData();
-  }
-
-  FactsData(){
-    this.FactsArray = [
-      {
-        title: "",
-        description: ""
-      },
-      {
-        title: "",
-        description: ""
-      },
-      {
-        title: "",
-        description: ""
-      },
-      {
-        title: "",
-        description: ""
-      },
-      {
-        title: "",
-        description: ""
-      },
-      {
-        title: "",
-        description: ""
-      }
-    ];
-    return this.FactsArray;
   }
 
 }

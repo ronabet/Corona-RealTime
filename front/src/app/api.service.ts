@@ -38,7 +38,7 @@ export class ApiService {
   .set('country', "");
 
   headersOptions = new HttpHeaders()
-  .set('x-rapidapi-key', 'fd565ad5a2msh8156f64d17d4454p1c66fdjsn1f30d420a80a')
+  .set('x-rapidapi-key', config.ACCESS_TOKEN)
 
   options = { params: this.params1, headers: this.headersOptions };
 

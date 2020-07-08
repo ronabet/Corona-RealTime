@@ -1,7 +1,4 @@
 
-/* @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap'); */
-
-/* #1cbfff */
 #title{
   text-align: center;
   left: 20vh;
@@ -83,7 +80,6 @@
   transition: 0.2s;
   text-align: center;
   cursor: context-menu;
-  /* min-width: 70px; */
 }
 
 #deaths:hover {
@@ -156,7 +152,6 @@ h2 {
 
 .card:hover #totalCases {
   top: 10px;
-  /* transition: 0.2s; */
 }
 
 #totalCases{
@@ -187,8 +182,6 @@ h2 {
   grid-template-columns: auto auto auto auto auto;
   grid-gap: 10px;
 }
-
-
 
 .israelCard:hover{
   box-shadow: 0 5px 14px 0 black;

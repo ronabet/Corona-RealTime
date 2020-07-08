@@ -12,7 +12,7 @@ span {cursor: context-menu;}
     align-items: center;
     display: grid;
     position: fixed;
-    grid-template-areas: "a b c d e f g h i j";
+    grid-template-areas: "a b c d e ";
     grid-template-columns: repeat(10,1fr);
     background-color: #0e1020;
     height: 7vh;
@@ -84,6 +84,7 @@ span {cursor: context-menu;}
     bottom: 7px;
     transition: 0.3s;
     left: 10px;
+    min-width: 35px;
 }
 
 #symp:hover{
@@ -151,7 +152,7 @@ span {cursor: context-menu;}
     right: 0;
     min-width: 70px;
   }
-  
+
 
 
 

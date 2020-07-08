@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EventEmitterService } from '../event-emitter.service';
+import * as CanvasJS from '../../assets/canvasjs.min';
 
 @Component({
   selector: 'app-qa',
@@ -8,14 +10,40 @@ import { Component, OnInit } from '@angular/core';
 export class QaComponent implements OnInit {
 
   panelOpenState = false;
+  kak: any;
 
-  constructor() { }
+  constructor(public EventEmitter: EventEmitterService) { }
 
   questions: Object[] = [];
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.QuestionsData();
   }
+
+  // ngOnInit() {
+  //   let chart = new CanvasJS.Chart("chartContainer", {
+  //     theme: "dark2",
+  //     animationEnabled: true,
+  //     exportEnabled: true,
+  //     title:{
+  //       text: "Top Countries Corona Chart"
+  //     },
+  //     data: [{
+  //       type: "column",
+  //       indexLabel: "{label}",
+  //       dataPoints: [
+  //         { y: 3000000, label: "USA" },
+  //         { y: 1683738, label: "BRAZIL" },
+  //         { y: 769052, label: "INDIA" },
+  //         { y: 800, label: "RUSSIA" },
+  //         { y: 150, label: "PERU" },
+  //         { y: 150, label: "CHILE"},
+  //         { y: 250, label: "Others" }
+  //       ]
+  //     }]
+  //   });
+  //   chart.render();
+  //   }
 
   QuestionsData(){
     this.questions = [
@@ -44,7 +72,6 @@ export class QaComponent implements OnInit {
         description: "Anyone can get COVID-19, regardless of race or skin colour. Older people and people with other health conditions, such as asthma, heart diseases and diabetes, are more at risk of getting seriously ill. "
       }
     ];
-    return this.questions;
   }
 
 

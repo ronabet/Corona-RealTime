@@ -1,15 +1,16 @@
 <h4 id="title">QUESTIONS AND ANSWERS ABOUT THE CORONAVIRUS</h4>
 
-<div *ngFor="let quest of questions">
+<div *ngFor="let question of questions">
   <mat-expansion-panel>
     <mat-expansion-panel-header class="panel">
       <mat-panel-title class="questTitle">
-        {{ quest.title }}
+        {{ question.title }}
       </mat-panel-title>
       <mat-panel-description>
-        <!-- This is a summary of the content -->
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>{{ quest.description }}</p>
+    <p>{{ question.description }}</p>
   </mat-expansion-panel>
 </div>
+
+<!-- <div id="chartContainer" style="width: 100%; height: 400px;"></div> -->
