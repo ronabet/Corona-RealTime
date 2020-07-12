@@ -35,7 +35,6 @@ background-color: #1c1d2c !important;
     background-color: #26273b !important;   
 }
     
-
 .mat-expansion-panel-header:hover {
     background: #26273b;
 } 
@@ -45,3 +44,8 @@ background-color: #1c1d2c !important;
     font-family: 'Pathway Gothic One', sans-serif;
 }
 
+@media screen and (max-width: 675px) {
+    .questTitle{
+        font-size: 19px;
+    }
+}

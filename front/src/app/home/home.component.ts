@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, CountryStatisticModel, WorldStatisticModel } from '../api.service';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ApiService, CountryStatisticModel } from '../api.service';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
+import { EventEmitterService } from '../event-emitter.service';
+
 
 export interface DialogData {
   animal: string;
@@ -26,7 +28,7 @@ export class HomeComponent implements OnInit {
   name: string;
   WorldStatResObject: any;
 
-  constructor(public api: ApiService, public dialog: MatDialog) { }
+  constructor(public api: ApiService, public dialog: MatDialog, public eventEmmiter: EventEmitterService) { }
 
   ngOnInit(): void {
     this.getWorldStat();
@@ -50,6 +52,7 @@ export class HomeComponent implements OnInit {
           })
         });
         this.StatsToDisplay = this.AllCountriesArray;
+        this.eventEmmiter.sendChartsData(this.StatsToDisplay[0]);
       });
     }
 

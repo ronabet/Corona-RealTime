@@ -12,19 +12,20 @@ span {cursor: context-menu;}
     align-items: center;
     display: grid;
     position: fixed;
-    grid-template-areas: "a b c d e f g h i j";
+    grid-template-areas: "a b c d e f";
     grid-template-columns: repeat(10,1fr);
     background-color: #0e1020;
-    height: 7vh;
+    height: 68px;
     box-shadow: 0 5px 13px 0 #070911;
     top: 0%;
     z-index: 1;
+    grid-gap: 10px;
 }
 
 #home{
     font-family: 'Pathway Gothic One', sans-serif;
     grid-area: c;
-    font-size: 1.3rem;
+    font-size: 23px;
     color: white;
     cursor: pointer;
     position: relative;
@@ -38,11 +39,22 @@ span {cursor: context-menu;}
 
 }
 
-#info{
+#symp{
     text-align: center;
     font-family: 'Pathway Gothic One', sans-serif;
     grid-area: d;
-    font-size: 1.3rem;
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    bottom: 7px;
+    transition: 0.3s;
+}
+
+#charts{
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 23px;
     color: white;
     cursor: pointer;
     position: relative;
@@ -54,7 +66,7 @@ span {cursor: context-menu;}
     text-align: center;
     font-family: 'Pathway Gothic One', sans-serif;
     grid-area: f;
-    font-size: 1.3rem;
+    font-size: 23px;
     color: white;
     cursor: pointer;
     position: relative;
@@ -64,7 +76,7 @@ span {cursor: context-menu;}
 
 }
 
-#info:hover{
+#symp:hover{
     color: #bf71ff;
 }
 
@@ -73,40 +85,23 @@ span {cursor: context-menu;}
 
 }
 
-#symp{
-    text-align: center;
-    font-family: 'Pathway Gothic One', sans-serif;
-    grid-area: e;
-    font-size: 1.3rem;
-    color: white;
-    cursor: pointer;
-    position: relative;
-    bottom: 7px;
-    transition: 0.3s;
-    left: 10px;
-}
-
-#symp:hover{
-    color: #9193a8;
-}
-
 #qa{
     text-align: center;
     font-family: 'Pathway Gothic One', sans-serif;
-    grid-area: g;
-    font-size: 1.3rem;
+    grid-area: e;
+    font-size: 23px;
     color: white;
     cursor: pointer;
     position: relative;
     bottom: 7px;
     transition: 0.3s;
-    left: 25px;
+    /* left: 10px; */
+    min-width: 35px;
 }
 
 #qa:hover{
-    color: #bf71ff;
+    color: #9193a8;
 }
-
 
 
 #corona-title{
@@ -138,20 +133,42 @@ span {cursor: context-menu;}
 
 @media screen and (max-width: 675px) {
 
-  #logo {
-    grid-area: a;
-    position: relative;
-    bottom: 7px;
-    width: 10vw;
-  }
+    #logo {
+        grid-area: a;
+        position: relative;
+        bottom: 2px;
+        width: 35px;
+    }
 
-  #corona-title{
-    position: relative;
-    bottom: 7px;
-    right: 0;
-    min-width: 70px;
-  }
-  
+    #corona-title{
+        position: relative;
+        bottom: 2px;
+        right: 0;
+        font-size: 20px;
+        min-width: 60px;
+    }
+
+    #home{
+        font-size: 20px;
+        bottom: 2px;
+    }
+
+    #symp{   
+        font-size: 20px;
+        bottom: 2px;
+    }
+
+    #qa{   
+        font-size: 20px;
+        bottom: 2px;
+    }
+
+    #charts{   
+        font-size: 20px;
+        bottom: 2px;
+    }
+    
+
 
 
 

@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node corona.js"
   },
   "author": "",
@@ -12,11 +11,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
-    "jsonwebtoken": "^8.5.1",
     "express": "^4.17.1",
-    "express-session": "^1.16.2",
-    "passport": "^0.4.0",
-    "passport-shraga": "^1.0.0",
-    "spike-get-token": "^1.1.1"
+    "express-session": "^1.16.2"
   }
 }
