@@ -20,31 +20,6 @@ export class QaComponent implements OnInit {
     this.QuestionsData();
   }
 
-  // ngOnInit() {
-  //   let chart = new CanvasJS.Chart("chartContainer", {
-  //     theme: "dark2",
-  //     animationEnabled: true,
-  //     exportEnabled: true,
-  //     title:{
-  //       text: "Top Countries Corona Chart"
-  //     },
-  //     data: [{
-  //       type: "column",
-  //       indexLabel: "{label}",
-  //       dataPoints: [
-  //         { y: 3000000, label: "USA" },
-  //         { y: 1683738, label: "BRAZIL" },
-  //         { y: 769052, label: "INDIA" },
-  //         { y: 800, label: "RUSSIA" },
-  //         { y: 150, label: "PERU" },
-  //         { y: 150, label: "CHILE"},
-  //         { y: 250, label: "Others" }
-  //       ]
-  //     }]
-  //   });
-  //   chart.render();
-  //   }
-
   QuestionsData(){
     this.questions = [
       {

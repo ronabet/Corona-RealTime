@@ -20,16 +20,13 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('', { relativeTo: this.route });
   }
 
-  onInfo(){
-    this.router.navigateByUrl('information', { relativeTo: this.route });
-  }
 
   onSymp(){
     this.router.navigateByUrl('symptoms', { relativeTo: this.route });
   }
 
-  onProtect(){
-    this.router.navigateByUrl('protectyourself', { relativeTo: this.route });
+  onCharts(){
+    this.router.navigateByUrl('charts', { relativeTo: this.route });
   }
 
   onQA(){

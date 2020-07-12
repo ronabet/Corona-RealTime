@@ -1,8 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { config } from '../../environments/config.dev';
-import { ApiService, CountryStatisticModel, WorldStatisticModel } from '../api.service';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-dialog',

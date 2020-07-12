@@ -8,14 +8,13 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { MatSidenavModule} from '@angular/material/sidenav';
-import { InfoComponent } from './info/info.component';
 import { SympComponent } from './symp/symp.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { QaComponent } from './qa/qa.component';
-// import { BrowserAnimationsModule } from '@angular/animations'
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +22,10 @@ import { QaComponent } from './qa/qa.component';
     HeaderComponent,
     HomeComponent,
     SearchBarComponent,
-    InfoComponent,
     SympComponent,
     DialogComponent,
-    QaComponent
+    QaComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,

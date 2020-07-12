@@ -48,7 +48,7 @@
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   grid-gap: 5px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   grid-auto-flow: column;
 }
@@ -68,11 +68,11 @@
   cursor: context-menu;
 }
 
-#cases:hover {
+/* #cases:hover {
   color: #6afff3;
   transform: translate(0px, -20px);
   font-size: 2vw ;
-}
+} */
 
 #deaths {
   color: #bf71ff;
@@ -82,11 +82,11 @@
   cursor: context-menu;
 }
 
-#deaths:hover {
+/* #deaths:hover {
   color: #bf71ff;
   font-size: 2vw;
   transform: translate(0px, -20px);
-}
+} */
 
 #otherStats {
   color: #9193a8;
@@ -96,11 +96,11 @@
   cursor: context-menu;
 }
 
-#otherStats:hover {
+/* #otherStats:hover {
   color: #9193a8;
   font-size: 2vw ;
   transform: translate(0px, -20px);
-}
+} */
 
 .item1 {
   grid-row: 1 ;
@@ -143,16 +143,16 @@ h2 {
 
 .card:hover{
   cursor: pointer;
-  width: 200px;
+  width: 185px;
   box-shadow: 0 5px 14px 0 black;
   background-color: #26273b;
-  height: 120px;
+  height: 115px;
   color: #ffffff;
 }
-
+/* 
 .card:hover #totalCases {
   top: 10px;
-}
+} */
 
 #totalCases{
   color: #6afff3;
@@ -195,7 +195,7 @@ h2 {
   font-weight: inherit;
   border-radius: 20px;
   background-color: #26273b;
-  margin: 60px auto;
+  margin: auto;
   transition: 0.2s;
 
 }
@@ -244,8 +244,26 @@ svg rect{
 @media (max-width: 650px) {
   #loaderContainer{
     display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .grid-container{
+    padding: 0;
+  }
+
+  .card{
+    height: 95px;
+    width: 120px;
+  }
+
+  .card:hover{
+    height: 95px;
+    width: 120px;
+  }
+
+  #totalCases{
+    font-size: 30px;
   }
 }
 
@@ -270,8 +288,13 @@ svg rect{
   }
 
   .israelCard {
-    height: 25vh;
+    height: 26%;
   }
+
+  .grid-container-row {
+    grid-gap: 5px;
+  }
+
 }
 
 .component-color {
